@@ -1,27 +1,38 @@
-# App
+# Delete following file from front end not from `server/` folder
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
+1. target folder
+2. full-project.jar
+3. HELP.md
+4. mvnw
+5. mvnw.cmd
+6. pom.xml
+7. mysql-connector.jar
 
-## Development server
+# setting database
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Online Database is used so dont need to add other mysql database
+For php admin : 
 
-## Code scaffolding
+1. Go to this site https://www.freemysqlhosting.net/
+2. email : www.shyam.pradhan@gmail.com
+3. password : will send on whatsapp.
+4. server name : given in table
+5. Database name : given in table
+6. password : dmibSA1rcoSxThc
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# frontend
+1. go to app folder
+2. on terminal type npm install 
+3. it will install all dependancies
+4. now run >>> ng serve
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# setting backend
+1. open eclips
+2. in file menu go to import
+3. click on maven import
+4. select existing maven project
+5. select server folder
+6. it will show pom.xml
+7. click on finish button
+8. after installation click on run it will start project.
