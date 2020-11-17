@@ -1,0 +1,2 @@
+<app-login-page (login)="loginStatus($event)" *ngIf="!islogin"></app-login-page>
+<app-product-page *ngIf="islogin" [username]="name" [products]="products" (addproduct)="addProduct($event)"></app-product-page>

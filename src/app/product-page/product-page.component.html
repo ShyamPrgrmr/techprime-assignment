@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="navbar">
+        <p class="username">Hello, {{username}}</p>
+        <button class="btn" (click)="addProduct()" *ngIf="!isAdd">Add Product</button>
+        <button class="btn" (click)="saveProduct()" *ngIf="isAdd">Save Product</button>
+        <button class="btn noleftmarging" (click)="cancel()" *ngIf="isAdd">Cancel</button>
+    </div>
+
+    <div class="table-container" *ngIf="!isAdd">
+        <table class="table" *ngIf="isDataAvailable">
+            <tr class='head'>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Active</th>
+            </tr>
+            <tr *ngFor="let product of products"> 
+                <td>{{product.id}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.category}}</td>
+                <td>{{product.quantity}}</td>
+                <td>${{product.price}}</td>
+                <td class="definer">
+                    <div class="active" *ngIf="product.status"></div>
+                    <div class="inactive" *ngIf="!product.status"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="add-product" *ngIf="isAdd">
+        <div class="form">
+            <label class="label">Product Name</label>
+            <input class="input" placeholder="Name of product" [(ngModel)]="name"/>
+            <label class="label">Product Category</label>
+            <input class="input" placeholder="Category of product" [(ngModel)]="category"/>
+            <label class="label">Product Quantity</label>
+            <input class="input" type="number" placeholder="Quantity of product" [(ngModel)]="quantity"/>
+            <label class="label">Product Price</label>
+            <input class="input" type="number" placeholder="Price of product" [(ngModel)]="price"/>
+            <label class="label">Product Status</label>
+            <select (change)="selectChange($event)">
+                <option value="true">Active</option>
+                <option value="false">Inactive</option>
+            </select>
+        </div>
+    </div>
+
+
+</div>

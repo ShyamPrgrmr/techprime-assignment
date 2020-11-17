@@ -1,0 +1,12 @@
+<div class="login">
+    <div class="box">
+        <p class="heading">Login Page</p>
+        <div class='form'>
+            <label class='label'>Username</label>
+            <input type="text" [(ngModel)] = "username" class="input" name="username"  placeholder="Username">
+            <label class='label'>Password</label>
+            <input type="text" [(ngModel)] = "password" placeholder='Password' class="input">
+            <button class="button" name='btn' (click)='onLogin()'>Login</button>
+        </div>
+    </div>
+</div>
