@@ -28,7 +28,10 @@ export class ProductPageComponent implements OnInit {
     this.cd.markForCheck();
   }
   selectChange=($event:any)=>{
-    this.active = $event.target.value;
+    if($event.target.value==='true')
+      this.active = true;
+    else
+      this.active = false;
   }
   addProduct=()=>{
     this.isAdd=true;
